@@ -101,12 +101,58 @@ print("만나서 반갑습니다. "+name+"씨")
 
 print("이름의 길이는 다음과 같군요:", len(name))
 
+age = int(input("나이가 어떻게 되나요?"))
+print("내년이면"+str(age+1)+"이 되시는군요.")
 
+
+# Lab : BMI 계산하기 - 사용자로부터 신장과 체중을 입력받아서 체질량지수 값을 출력하는 프로그램을 작성해 보자
+
+weight = float(input("몸무게를 kg 단위로 입력하시오: "))
+height = float(input("키를 미터 단위로 입력하시오: "))
+
+bmi = (weight / (height**2))
+print("당신의 BMI=", bmi)
+
+
+# Lab : 구의 부피 계산하기 - 반지름이 5m인 구의 부피를 계산하는 프로그램을 작성해보자.
+
+r = float(input("반지름을 입력하시오: "))
+
+volume = (4.0/3.0) * 3.141592 * r**3
+
+print("구의 부피 =", volume)
+
+
+
+# Lab : 자동판매기 프로그램 - 자동 판매기를 시뮬레이션 하는 프로그램을 작성하여 보자.
+
+itemPrice = int(input("물건값을 입력하시오: "))
+note = int(input("1000원 지폐개수: "))
+coin500 = int(input("500원 동전개수: "))
+coin100 = int(input("100원 동전개수: "))
+
+change = note*1000 + coin500*500 + coin*100 - itemPrice
+
+# 거스름돈(500원동전개수)을 계산한다
+nCoin500 = change//500
+change = change%500
+# 거스름돈(100원동전개수)을 계산한다
+nCoin100 = change//100
+change = change%100
+# 거스름돈(10원동전개수)을 계산한다
+nCoin10 = change//10
+change = change%10
+# 거스름돈(1원동전개수)을 계산한다
+nCoin1 = change
+
+print("500원=", nCoin500, "100원=", nCoin100, "10원=", nCoin10, "1원=", nCoin1)
 
 
 
 # 실습파일(전부 해야 함)
 # 1. 1+2+3을 계산하면 6이 된다.
+
+
 
 # 2. 전체 다리의 수는?
 
