@@ -152,23 +152,54 @@ print("500원=", nCoin500, "100원=", nCoin100, "10원=", nCoin10, "1원=", nCoi
 # 실습파일(전부 해야 함)
 # 1. 1+2+3을 계산하면 6이 된다.
 
+a = 1
+b = 2
+c = 3
 
+print(f"1+2+3을 계산하면 {a+b+c}이 된다")
 
 # 2. 전체 다리의 수는?
 
-print('닭의 수:')
-x = int(input())
-print('돼지의 수:')
-y = int(input())
-print('소의 수:')
-z = int(input())
+x = int(input("닭의 수 : "))
+y = int(input("돼지의 수 : "))
+z = int(input("소의 수 : "))
 print('전체 다리의 수:', x*2+y*4+z*4)
-
 
 # 3. 시간과 분을 입력 받아, 초로 변환하라
 
+time = int(input("시간을 입력하시오: "))
+minute = int(input("분을 입력하시오: "))
+
+print(f"{time} 시간 {minute} 분은 {time*60*60 + minute*60} 초 입니다.")
+
+
 # 4. 두 점의 좌표를 받아 두 점 사이의 거리 계산
+
+x1 = int(input("x1="))
+y1 = int(input("y1="))
+x2 = int(input("x2="))
+y2 = int(input("y2="))
+dist = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+print(dist)
 
 # 5. 4자리의 정수를 입력 받아 자리수 합 계산
 
+n = int(input("정수="))
+s = 0
+
+s += n % 10
+n = n // 10
+s += n % 10
+n = n // 10
+s += n % 10
+n = n // 10
+s += n % 10
+n = n // 10
+
+print(s)
+
 # 6. 100000~999999인 정수 입력 받아 천단위 구분 쉼표 넣어서 화면에 출력
+
+num = int(input("숫자를 입력하시오: "))
+numformat = format(num, ',d')
+print(numformat)
